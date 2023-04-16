@@ -23,7 +23,7 @@
 
     <org.imaginativeworld.whynotimagecarousel.ImageCarousel
         android:id="@+id/carousel"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="256dp"
         app:autoPlay="true"
         app:autoPlayDelay="3000"
@@ -35,25 +35,56 @@
         app:infiniteCarousel="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtname"
-        app:layout_constraintVertical_bias="0.239"
+        app:layout_constraintVertical_bias="0.216"
         app:showCaption="true"
         app:showNavigationButtons="true" />
 
-    <Button
-        android:id="@+id/bottom_navigator"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Take Picture"
-        android:backgroundTint="#1d88a1"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carousel"
-        app:layout_constraintVertical_bias="0.995" />
+        app:layout_constraintTop_toBottomOf="@+id/carousel">
+
+        <!--            app:layout_constraintTop_toBottomOf="@+id/carousel"-->
+
+        <Button
+            android:id="@+id/bottom_navigator"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.172"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.711" />
+
+        <Button
+            android:id="@+id/galleryBtn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:text="Gallery"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_navigator"
+            app:layout_constraintStart_toEndOf="@+id/bottom_navigator"
+            app:layout_constraintTop_toTopOf="@+id/bottom_navigator" />
+
+    </RelativeLayout>
+
+
+
 
     <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--        android:id="@+id/bottom_navigatior"-->

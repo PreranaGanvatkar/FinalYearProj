@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "674987003321",
+    "project_id": "finalyearproj-2e226",
+    "storage_bucket": "finalyearproj-2e226.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674987003321:android:a780ef6ef54d26ff8f3a68",
+        "android_client_info": {
+          "package_name": "com.prerana.finalyearproj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674987003321-ugrucjc1du78j6k1b02n3uiqho6r6174.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1xTNsU_6R0B2sF-_IUc2LX9ofmFd4lps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674987003321-ugrucjc1du78j6k1b02n3uiqho6r6174.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

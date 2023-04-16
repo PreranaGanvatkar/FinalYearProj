@@ -1,6 +1,7 @@
 package com.prerana.finalyearproj;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
@@ -25,8 +26,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    Button button;
+    Button button,galleryBtn;
     private static final int PERMISSION_CODE =1234;
+    public static final int GALLERY_REQUEST_CODE = 105;
     Uri image_uri;
     private static final int CAPTURE_CODE =1001 ;
 
@@ -103,6 +105,16 @@ public class MainActivity extends AppCompatActivity {
 
         // bottom nav
 
+//        button = findViewById(R.id.bottom_navigator);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ImagePicker.Companinon.with(MainActivity.this);
+//                .crop()
+//                        .maxRes
+//            }
+//        });
+
         button =findViewById(R.id.bottom_navigator);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,8 +163,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
+        galleryBtn = findViewById(R.id.galleryBtn);
+        galleryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gallery = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(gallery, GALLERY_REQUEST_CODE);
+            }
+        });
 
 
     }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//    }
 }
